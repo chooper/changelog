@@ -111,4 +111,4 @@ def index():
 
 
 if __name__ == '__main__':
-    app.run(debug=settings.DEBUG, host=settings.LISTEN_HOST, port=settings.LISTEN_PORT)
+    app.run(debug=settings.DEBUG, host=settings.LISTEN_HOST, port=int(settings.LISTEN_PORT))

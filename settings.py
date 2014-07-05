@@ -1,16 +1,18 @@
-ALCHEMY_URL = 'sqlite:///changelog.db' #Any valid SQLAlchemy connection string.
-LISTEN_HOST = "127.0.0.1"
-LISTEN_PORT = 5000
+import os
 
-# Flask debug mode
-DEBUG = True
+# Configure your settings through env vars, or change their defaults here
+ALCHEMY_URL = os.getenv('DATABASE_URL', 'sqlite:///changelog.db')   # Any valid SQLAlchemy connection string
+LISTEN_HOST = os.getenv('HOST',         '127.0.0.1')                # Which IP to bind to
+LISTEN_PORT = os.getenv('PORT',         '5000')                     # Which port to listen on
+
+# Flask debug mode (if DEBUG is set and not set to the string '0' then it's enabled)
+DEBUG = os.getenv('DEBUG') != '0'
 
 # Use these to enable sending problems to Sentry
-USE_SENTRY = False
-SENTRY_DSN = None
+SENTRY_DSN = os.getenv('SENTRY_DSN')
+USE_SENTRY = SENTRY_DSN and os.getenv('USE_SENTRY') != '0'
 
 # Loading site-specific override settings
-import os
 extra_settings_path = os.getenv('CHANGELOG_SETTINGS_PATH')
 if extra_settings_path is not None:
     try:
