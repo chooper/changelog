@@ -2,6 +2,9 @@ ALCHEMY_URL = 'sqlite:///changelog.db' #Any valid SQLAlchemy connection string.
 LISTEN_HOST = "127.0.0.1"
 LISTEN_PORT = 5000
 
+# Flask debug mode
+DEBUG = True
+
 # Use these to enable sending problems to Sentry
 USE_SENTRY = False
 SENTRY_DSN = None
