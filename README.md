@@ -98,7 +98,7 @@ Values you can set:
 | `USE_SENTRY`  | Send exceptions to Sentry?                                                       | `False`        |
 | `SENTRY_DSN`  | Sentry DSN, used only if `USE_SENTRY` is `True`.                                 | `None`         |
 
-The default configuration values are in [settings.py](settings.py).
+The default configuration values are in [settings.py](settings.py) but can also be overriden through environment variables. Refer to `settings.py` for the correct variable names.
 
 ## Considerations for running in production
 
