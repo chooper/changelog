@@ -17,7 +17,7 @@ if settings.USE_SENTRY:
 try:
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///'+settings.DB_PATH
 except AttributeError:
-    app.config['SQLALCHEMY_DATABASE_URI'] = settings.ALCHEMY_URL
+    app.config['SQLALCHEMY_DATABASE_URI'] = settings.DATABASE_URL
 
 api = Api(app)
 db = SQLAlchemy(app)

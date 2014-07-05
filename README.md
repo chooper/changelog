@@ -85,14 +85,14 @@ look like this:
 
 ```python
 LISTEN_PORT = 8080
-ALCHEMY_URL = 'sqlite:////opt/foo/bar/local/changelog.db'
+DATABASE_URL = 'sqlite:////opt/foo/bar/local/changelog.db'
 ```
 
 Values you can set:
 
 | Variable      | Description                                                                      | Default        |
 |---------------|----------------------------------------------------------------------------------|----------------|
-| `ALCHEMY_URL`     | SQL Alchemy connection string.                                               |`sqlite:///changelog.db`  |
+| `DATABASE_URL`     | SQL Alchemy connection string.                                               |`sqlite:///changelog.db`  |
 | `LISTEN_HOST` | IP address where the application will listen when started with `python application.py`.| `127.0.0.1`         |
 | `LISTEN_PORT` | Port where the application will listen when started with `python application.py`.| `5000`         |
 | `USE_SENTRY`  | Send exceptions to Sentry?                                                       | `False`        |

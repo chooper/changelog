@@ -1,7 +1,7 @@
 import os
 
 # Configure your settings through env vars, or change their defaults here
-ALCHEMY_URL = os.getenv('DATABASE_URL', 'sqlite:///changelog.db')   # Any valid SQLAlchemy connection string
+DATABASE_URL = os.getenv('DATABASE_URL', 'sqlite:///changelog.db')   # Any valid SQLAlchemy connection string
 LISTEN_HOST = os.getenv('HOST',         '127.0.0.1')                # Which IP to bind to
 LISTEN_PORT = os.getenv('PORT',         '5000')                     # Which port to listen on
 
