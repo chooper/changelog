@@ -85,7 +85,7 @@ look like this:
 
 ```python
 LISTEN_PORT = 8080
-DATABASE_URL = 'sqlite:////opt/foo/bar/local/changelog.db'
+ALCHEMY_URL = 'sqlite:////opt/foo/bar/local/changelog.db'
 ```
 
 Values you can set:
